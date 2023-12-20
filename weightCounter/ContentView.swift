@@ -18,7 +18,7 @@ struct ContentView: View {
     //    @FocusState var focus: Bool
     
     @AppStorage("totalPoints") var totalPoints: Int = 0
-    @AppStorage("pointsRemaining") var pointsRemaining: Int = 14
+    @AppStorage("pointsRemaining") var pointsRemaining: Int = 16
     @AppStorage("totalWeeklyPoints") var totalWeeklyPoints: Int = 0
     @AppStorage("pointsWeeklyRemaining") var pointsWeeklyRemaining: Int = 35
     
@@ -28,7 +28,7 @@ struct ContentView: View {
     @State var protein: Double?
     @State var sugars: Double?
     @State var foodPointsAnswer = ""
-    @State var divideBy = 1.0
+//    @State var divideBy = 1.0
     
     
     
@@ -216,7 +216,7 @@ struct ContentView: View {
                                     
                                     Button {
                                         
-                                        if totalPoints < 14 && pointsRemaining > 0 {
+                                        if totalPoints < 16 && pointsRemaining > 0 {
                                             totalPoints += 1
                                             pointsRemaining -= 1
                                         }
@@ -299,7 +299,7 @@ struct ContentView: View {
                                 
                                 Button {
                                     totalPoints = 0
-                                    pointsRemaining = 14
+                                    pointsRemaining = 16
                                     
                                 } label: {
                                     
